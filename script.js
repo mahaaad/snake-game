@@ -1,6 +1,7 @@
 let gridArray = [];
 let score = 0;
 let length = 3;
+let speed = 200;
 let direction = "U";
 let snakeX = 5;
 let snakeY = 5;
@@ -106,7 +107,7 @@ function startGame(){
             document.getElementById(`${snakeId}`).classList.add("snake");
             setTimeout(() => {
                 document.getElementById(`${snakeId}`).classList.remove("snake");
-              }, length*125)
+              }, length*speed)
     
 
 
@@ -115,7 +116,7 @@ function startGame(){
             clearInterval(moveSnake) 
         }
 
-      }, 125);
+      }, speed);
 }
 
 
